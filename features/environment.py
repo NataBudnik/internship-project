@@ -48,6 +48,9 @@ def after_step(context, step):
 def after_scenario(context, feature):
     context.driver.quit()
 
+
+
+
     # browserstack_username = 'natalyabudnik_V873Ue'
     # browserstack_access_key = 'sfN3tr1b9bSiMszydpcJ'
 
