@@ -1,6 +1,5 @@
 # Created by smypboss at 11/5/24
-Feature:
-   "Contact Us" page functionality
+Feature:"Contact Us" page functionality
 
   Scenario: User can open the Contact us page
 

@@ -30,7 +30,7 @@ def click_contact_us(context):
 @then('verify the right page opens')
 def verify_right_page(context):
 
-    #WebDriverWait(context.driver, 20).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[3]')))
+
     WebDriverWait(context.driver, 30).until(EC.url_contains("contact-us"))
 
     current_url = context.driver.current_url
