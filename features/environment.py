@@ -15,20 +15,34 @@ def browser_init(context, scenario_name):
     bs_key = 'sfN3tr1b9bSiMszydpcJ'
     url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
 
+
+
     options = Options()
     bstack_options = {
-        "os" : "Windows",
-        "osVersion" : "11",
-        'browserName': 'chrome',
+      #  "os" : "Windows",
+       # "osVersion" : "11",
+       # 'browserName': 'chrome',
+       # 'sessionName': scenario_name,
+   # }
+   # options.set_capability('bstack:options', bstack_options)
+   # context.driver = webdriver.Remote(command_executor=url, options=options)
+
+      "deviceName" : "iPhone 15 Pro",
+        "osVersion" : "18",
+        'browserName': 'safari',
         'sessionName': scenario_name,
     }
+
     options.set_capability('bstack:options', bstack_options)
     context.driver = webdriver.Remote(command_executor=url, options=options)
 
 
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(4)
-    context.app = Application(context.driver)
+
+
+
+   # context.driver.maximize_window()
+   # context.driver.implicitly_wait(4)
+    #context.app = Application(context.driver)
 
 
 def before_scenario(context, scenario):
@@ -51,8 +65,6 @@ def after_scenario(context, feature):
 
 
 
-    # browserstack_username = 'natalyabudnik_V873Ue'
-    # browserstack_access_key = 'sfN3tr1b9bSiMszydpcJ'
 
 
 
